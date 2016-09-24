@@ -45,7 +45,6 @@ import { AppState } from './app.service';
 
     <main>
       <router-outlet></router-outlet>
-      <collapsible-list></collapsible-list>
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>

@@ -21,9 +21,6 @@ import '@angularclass/hmr';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
-import 'jquery';
-import 'materialize-css/dist/js/materialize.js'
-
 if ('production' === ENV) {
   // Production
 
