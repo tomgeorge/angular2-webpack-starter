@@ -1,5 +1,3 @@
-import './polyfills.browser.aot';
-import './rxjs.imports';
 import { platformBrowser }    from '@angular/platform-browser';
 import { AppModuleNgFactory } from './src/compiled/app/app.module.ngfactory';
 

@@ -1,19 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
+    "module": "es2015",
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": true,
     "pretty": false,
     "sourceMap": true,
-    "lib": ["es5", "dom"],
     "strictNullChecks": false,
     "skipDefaultLibCheck": true,
     "outDir": "output",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "rootDir": "./src"
   },
+  "lib": [
+    "es6",
+    "dom"
+  ],
   "exclude": [
     "node_modules",
     "src/compiled",
@@ -23,7 +26,8 @@
     "src/main.browser.aot.ts",
     "src/main.browser.universal.ts",
     "src/app/app.module.universal.browser.ts",
-    "src/app/app.module.universal.node.ts"
+    "src/app/app.module.universal.node.ts",
+    "dist"
   ],
   "awesomeTypescriptLoaderOptions": {
     "useWebpackText": true,
