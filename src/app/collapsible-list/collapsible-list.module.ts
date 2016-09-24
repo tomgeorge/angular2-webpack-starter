@@ -1,8 +1,9 @@
 import { NgModule, ApplicationRef } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { CollapsibleList } from './collapsible-list.component';
+import { CollapsibleListDirective } from './collapsible-list.directive';
 
-import { MaterializeDirective } from 'angular2-materialize';
+import { MaterializeModule } from 'angular2-materialize';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -13,12 +14,14 @@ import { AppState } from '../app.service';
 @NgModule({
   declarations: [
     CollapsibleList,
-    MaterializeDirective
+    CollapsibleListDirective
   ],
 
   imports: [ //import materialize stuff
+    MaterializeModule,
+    CommonModule
   ],
-
+  exports: [ CollapsibleList ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
 
   ]

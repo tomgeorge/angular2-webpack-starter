@@ -22,3 +22,7 @@
 @import "~materialize-css/sass/components/roboto";
 
 @import "~materialize-css/sass/components/collapsible";
+
+.collapsible {
+    @extend .purple;
+}
