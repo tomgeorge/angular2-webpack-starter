@@ -13,7 +13,8 @@ import { AppState } from './app.service';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.style.css'
+    './app.style.css',
+    './app.style.scss'
   ],
   template: `
     <nav>
@@ -44,6 +45,7 @@ import { AppState } from './app.service';
 
     <main>
       <router-outlet></router-outlet>
+      <collapsible-list></collapsible-list>
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>

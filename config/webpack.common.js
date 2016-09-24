@@ -14,7 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin'); 
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
 /*
  * Webpack Constants
@@ -157,6 +157,10 @@ module.exports = function(options) {
           loaders: ['to-string-loader', 'css-loader']
         },
 
+        {
+          test: /\.scss$/, loaders: ['raw-loader', 'sass-loader']
+        },
+
         /* Raw loader support for *.html
          * Returns file content as string
          *
@@ -171,9 +175,10 @@ module.exports = function(options) {
         /* File loader for supporting images, for example, in CSS files.
         */
         {
-          test: /\.(jpg|png|gif)$/,
+          test: /\.(jpg|gif)$/,
           loader: 'file'
-        }
+        },
+        { test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/, loader: 'url-loader?limit=100000' },
       ],
 
       postLoaders: [
@@ -223,7 +228,7 @@ module.exports = function(options) {
       /**
        * Plugin: ContextReplacementPlugin
        * Description: Provides context to Angular's use of System.import
-       * 
+       *
        * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
        * See: https://github.com/angular/angular/issues/11580
        */
@@ -284,6 +289,13 @@ module.exports = function(options) {
       new HtmlElementsPlugin({
         headTags: require('./head-config.common')
       }),
+
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
+        Hammer: "hammerjs/hammer"
+      })
 
     ],
 
