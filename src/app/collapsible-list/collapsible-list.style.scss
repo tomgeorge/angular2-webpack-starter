@@ -1,0 +1,28 @@
+@import "~materialize-css/sass/components/mixins";
+@import "~materialize-css/sass/components/color";
+@import "~materialize-css/sass/components/variables";
+
+// Reset
+@import "~materialize-css/sass/components/normalize";
+
+// components
+@import "~materialize-css/sass/components/global";
+@import "~materialize-css/sass/components/icons-material-design";
+@import "~materialize-css/sass/components/grid";
+@import "~materialize-css/sass/components/navbar";
+@import "~materialize-css/sass/components/roboto";
+@import "~materialize-css/sass/components/typography";
+@import "~materialize-css/sass/components/cards";
+@import "~materialize-css/sass/components/toast";
+@import "~materialize-css/sass/components/tabs";
+@import "~materialize-css/sass/components/tooltip";
+@import "~materialize-css/sass/components/buttons";
+@import "~materialize-css/sass/components/dropdown";
+@import "~materialize-css/sass/components/waves";
+@import "~materialize-css/sass/components/roboto";
+
+@import "~materialize-css/sass/components/collapsible";
+
+.collapsible {
+    @extend .purple;
+}
