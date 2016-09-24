@@ -19,6 +19,8 @@ import { About } from './about';
 import { NoContent } from './no-content';
 import { XLarge } from './home/x-large';
 
+import { CollapsibleListModule } from './collapsible-list/collapsible-list.module';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -47,7 +49,8 @@ type StoreType = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    CollapsibleListModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

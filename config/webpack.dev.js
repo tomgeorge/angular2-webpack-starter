@@ -97,6 +97,10 @@ module.exports = function(options) {
       libraryTarget: 'var',
     },
 
+    loaders: [
+
+    ],
+
     plugins: [
 
       /**
@@ -141,6 +145,10 @@ module.exports = function(options) {
       resourcePath: 'src'
     },
 
+    sassLoader: {
+      includePaths: /materialize-css/
+    },
+
     /**
      * Webpack Development Server configuration
      * Description: The webpack-dev-server is a little node.js Express server.
@@ -157,7 +165,10 @@ module.exports = function(options) {
         aggregateTimeout: 300,
         poll: 1000
       },
-      outputPath: helpers.root('dist')
+      outputPath: helpers.root('dist'),
+      stats: {
+        colors: true
+      }
     },
 
     /*
