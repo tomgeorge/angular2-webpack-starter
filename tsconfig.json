@@ -10,26 +10,14 @@
     "noEmitHelpers": true,
     "strictNullChecks": false,
     "baseUrl": "./src",
-    "paths": [
-    ],
-    "lib": [
-      "dom",
-      "es6"
-    ],
-    "types": [
-      "hammerjs",
-      "jasmine",
-      "node",
-      "protractor",
-      "selenium-webdriver",
-      "source-map",
-      "uglify-js",
-      "webpack"
-    ]
+    "traceResolution": true,
+    "outDir": "dist/dynamic"
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/main.browser.aot.ts",
+    "src/polyfills.browser.aot.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

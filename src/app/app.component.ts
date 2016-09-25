@@ -23,18 +23,6 @@ import { AppState } from './app.service';
           Index
         </a>
       </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
-        </a>
-      </span>
     </nav>
 
     <main>
@@ -53,7 +41,7 @@ import { AppState } from './app.service';
     </footer>
   `
 })
-export class App {
+export class AppComponent {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
   name = 'Angular 2 Webpack Starter';
   url = 'https://twitter.com/AngularClass';
