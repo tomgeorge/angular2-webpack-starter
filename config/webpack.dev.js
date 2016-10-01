@@ -146,7 +146,7 @@ module.exports = function(options) {
     },
 
     sassLoader: {
-      includePaths: /materialize-css/
+      // includePaths: /materialize-css/
     },
 
     /**

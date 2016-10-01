@@ -38,6 +38,7 @@ import { AppState } from './app.service';
     </nav>
 
     <main>
+    <collapsible-list></collapsible-list>
       <router-outlet></router-outlet>
     </main>
 

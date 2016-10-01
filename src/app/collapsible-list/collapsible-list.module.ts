@@ -2,7 +2,7 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CollapsibleList } from './collapsible-list.component';
 import { CollapsibleListDirective } from './collapsible-list.directive';
-
+import 'materialize-css/dist/js/materialize.js';
 import { MaterializeModule } from 'angular2-materialize';
 /*
  * Platform and Environment providers/directives/pipes
